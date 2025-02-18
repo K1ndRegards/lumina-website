@@ -1,0 +1,432 @@
+/* ####### */
+/* Imports */
+/* ####### */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ################# */
+/* Custom Properties */
+/* ################# */
+
+:root {
+  --primary-color: #fcf5e9;
+  --dark-color: #333333;
+  --light-dark-color: #515151;
+  --uber-light-dark: rgb(170, 170, 170);
+  --container-normal: 1100px;
+  --container-wide: 1300px;
+  --container-narrow: 900px;
+}
+
+/* ############### */
+/* Utility Classes */
+/* ############### */
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+.container-md {
+  max-width: var(--container-normal);
+}
+
+.container-lg {
+  max-width: var(--container-wide);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ############ */
+/* Main Styling */
+/* ############ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* ###### */
+/* Header */
+/* ###### */
+
+header.main-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.main-header .wrapper .logo {
+  width: 130px;
+}
+
+header.main-header .wrapper .logo img {
+  width: 100%;
+}
+
+header.main-header .wrapper ul.nav {
+  display: flex;
+  column-gap: 15px;
+}
+
+header.main-header .wrapper ul.nav {
+  font-size: 1.5rem;
+}
+
+header.main-header .wrapper ul.nav a {
+  padding: 10px 15px;
+  color: var(--light-dark-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+header.main-header .wrapper ul.nav a.active {
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ################# */
+/* Home Page Styling */
+/* ################# */
+
+/* ################## */
+/* Home Page: Welcome */
+/* ################## */
+
+main.home-page .welcome .wrapper h1 {
+  margin-top: 135px;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+/* #################### */
+/* Home Page: Portfolio */
+/* #################### */
+
+main.home-page .portfolio .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+main.home-page .portfolio .wrapper .portfolio-item {
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+main.home-page .portfolio .wrapper .portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ################## */
+/* About Page Styling */
+/* ################## */
+
+/* #################### */
+/* About Page: Showcase */
+/* #################### */
+
+main.about-page .showcase .wrapper {
+  text-align: center;
+}
+
+main.about-page .showcase .wrapper h1 {
+  margin: 125px 0 125px;
+  font-size: 4.8rem;
+}
+
+/* #################### */
+/* About Page: Services */
+/* #################### */
+
+main.about-page .our-services .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main.about-page .our-services .wrapper h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+main.about-page .our-services .wrapper .services {
+  display: flex;
+  column-gap: 20px;
+}
+
+main.about-page .our-services .wrapper .services h3 {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+main.about-page .our-services .wrapper .services p {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* ################ */
+/* About Page: Team */
+/* ################ */
+
+main.about-page .team .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+main.about-page .team .wrapper h2 {
+  margin: 20px 0 40px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+main.about-page .team .wrapper .members {
+  display: flex;
+  column-gap: 20px;
+}
+
+main.about-page .team .wrapper .members .member {
+  width: calc(33.333% - 20px);
+  font-size: 1.5rem;
+}
+
+main.about-page .team .wrapper .members .member img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+main.about-page .team .wrapper .members .member h3 {
+  font-weight: 700;
+}
+
+/* #################### */
+/* Contact Page Styling */
+/* #################### */
+
+/* ##################### */
+/* Contact Page: Welcome */
+/* ##################### */
+
+main.contact-page .welcome .wrapper {
+  text-align: center;
+}
+
+main.contact-page .welcome .wrapper h1 {
+  margin: 140px 0 140px;
+  font-size: 4.6rem;
+}
+/* ##################### */
+/* Contact Page: Contact */
+/* ##################### */
+
+main.contact-page .contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main.contact-page .contact .wrapper h2 {
+  margin: 20px 0 30px;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+main.contact-page .contact .wrapper p {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+main.contact-page .contact .wrapper .contact-form {
+  width: 100%;
+}
+
+main.contact-page .contact .wrapper .contact-form .form-group {
+  width: 100%;
+}
+
+main.contact-page .contact .wrapper .contact-form input,
+main.contact-page .contact .wrapper .contact-form textarea {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  outline: none;
+  padding: 20px 0;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+main.contact-page .contact .wrapper .contact-form textarea {
+  height: 190px;
+  resize: none;
+}
+
+main.contact-page .contact .wrapper .contact-form button {
+  margin: 20px 0 90px;
+  border: 1px solid var(--dark-color);
+  padding: 15px 0;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+  }
+}
+
+/* ############## */
+/* Footer Styling */
+/* ############## */
+
+footer.main-footer {
+  margin-top: 10px;
+  border-top: 1px solid var(--uber-light-dark);
+  padding: 5px 20px;
+}
+
+footer.main-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+footer.main-footer .wrapper .logo {
+  width: 130px;
+}
+
+footer.main-footer .wrapper .logo img {
+  width: 100%;
+}
+
+footer.main-footer .wrapper h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer.main-footer .wrapper .socials ul.socials-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+footer.main-footer .wrapper .socials ul.socials-list a {
+  color: var(--dark-color);
+}
+
+@media screen and (max-width: 768px) {
+  /* ###### */
+  /* Header */
+  /* ###### */
+  header.main-header .wrapper {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  /* ################## */
+  /* Home Page: Welcome */
+  /* ################## */
+
+  main.home-page .welcome .wrapper h1 {
+    font-size: 2.8rem;
+  }
+
+  /* #################### */
+  /* Home Page: Portfolio */
+  /* #################### */
+
+  main.home-page .portfolio .wrapper .portfolio-item {
+    width: calc(50% - 20px);
+  }
+
+  /* ################### */
+  /* About Page: Welcome */
+  /* ################### */
+
+  main.about-page .showcase .wrapper h1 {
+    margin: 100px 0 100px;
+    font-size: 2.8rem;
+  }
+
+  /* #################### */
+  /* About Page: Services */
+  /* #################### */
+
+  main.about-page .our-services .wrapper .services {
+    flex-direction: column;
+  }
+
+  /* ################ */
+  /* About Page: Team */
+  /* ################ */
+
+  main.about-page .team .wrapper .members {
+    flex-direction: column;
+  }
+
+  main.about-page .team .wrapper .members .member {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /* ###### */
+  /* Footer */
+  /* ###### */
+
+  footer.main-footer .wrapper {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+  }
+
+  /* ##################### */
+  /* Contact Page: Welcome */
+  /* ##################### */
+
+  main.contact-page .welcome .wrapper h1 {
+    margin: 90px 0 90px;
+    font-size: 2.8rem;
+  }
+}
